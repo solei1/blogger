@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+{% load static %}
+<!-- saved from url=(0047)http://geekplux.com/hexo-theme-typing/archives/ -->
+<html lang="en" class="">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+  <title>Archives | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+{% block style %}
+
+  <link rel="stylesheet" type="text/css" href="{% static 'blog/css/style.css' %}">
+
+  <style type="text/css">.fancybox-margin{margin-right:0px;}</style>
+
+{% endblock %}
+</head>
+
+<body>
+
+  <div class="wrap">
+  <div class="top">
+    <header>
+      <a class="logo" href="{% url 'index' %}">beatJean</a>
+    </header>
+    <nav>
+      <ul class="links">
+
+                    <li>
+                      <a href="{% url 'blog:blog_archives' %}">Blog</a>
+                    </li>
+
+                    <li>
+                      <a href="https://github.com/solei1">GitHub</a>
+                    </li>
+
+                    <li>
+                      <a href="#">Wiki</a>
+                    </li>
+
+                    <li>
+                      <a href="{% url 'blog:about' %}">About</a>
+                    </li>
+
+                </ul>
+                </nav>
+            </div>
+        <div class="content">
+
+    {% block content %}{% endblock %}
+
+        </div>
+
+
+<hr>
+
+<footer id="footer" class=" footer">
+
+                      2017@<a href="https://github.com/solei1">soleil</a>
+
+
+    </footer>
+
+</div>
+
+
+</body></html>

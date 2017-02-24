@@ -1,0 +1,26 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+          <div class="archive">
+
+
+            {% for year, article_list in articles %}
+          <div>
+            <h2 class="archive-year">{{ year }}</h2>
+            {% for article in article_list %}
+              <div class="archive-post">
+              <span class="archive-post-time">{{ article.pub_date.month }}-{{ article.pub_date.day }}</span>
+              <span class="archive-post-title">
+                <a href="{% url 'blog:article_detail' article.pk %}">{{ article.title }}</a>
+              </span>
+              {% for tag in article.tags.all %}
+              <span class="tag-item"><a href="{% url 'blog:tag' tag.pk %}">{{ tag.name }}</a></span>
+              {% endfor %}
+            </div>
+            {% endfor %}
+          </div>
+          {% endfor %}
+
+
+        </div>
+{% endblock %}

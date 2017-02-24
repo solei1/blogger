@@ -1,0 +1,27 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+{% load markdown %}
+
+{% block style %}
+
+  <link rel="stylesheet" type="text/css" href="{% static 'blog/css/style.css' %}">
+
+  <style type="text/css">.fancybox-margin{margin-right:0px;}</style>
+  <link rel="stylesheet" href="{% static 'blog/css/pygments/default.css' %}">
+
+{% endblock %}
+
+
+
+{% block content %}
+
+<div class="article">
+
+<div class="article-title">{{ article.title }}</div>
+
+{{ article.body | custom_markdown }}
+
+</div>
+
+
+{% endblock %}
