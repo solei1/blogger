@@ -8,21 +8,31 @@
 
 首页
 
-![Screenshot at 2017-02-24 16-24-50](D:\soleil\Desktop\blogger\img\Screenshot at 2017-02-24 16-24-50.png)
+![Screenshot at 2017-02-24 16-24-50](http://o6uyyks1m.bkt.clouddn.com//django-blog/blog-django-1.png)
 
 
 
 博客首页  显示文章列表
 
-![Screenshot at 2017-02-24 16-25-36](D:\soleil\Desktop\blogger\img\Screenshot at 2017-02-24 16-25-36.png)
+![Screenshot at 2017-02-24 16-25-36](http://o6uyyks1m.bkt.clouddn.com//django-blog/blog-django-2.png)
 
 文章详情
 
-![Screenshot at 2017-02-24 16-26-07](D:\soleil\Desktop\blogger\img\Screenshot at 2017-02-24 16-26-07.png)
+![Screenshot at 2017-02-24 16-26-07](http://o6uyyks1m.bkt.clouddn.com//django-blog/blog-django-3.png)
+
+
+
+代码高亮
+
+![](http://o6uyyks1m.bkt.clouddn.com//django-blog/blog-django-4.png)
+
+
+
+
 
 标签检索
 
-![Screenshot at 2017-02-24 16-26-57](D:\soleil\Desktop\blogger\img\Screenshot at 2017-02-24 16-26-57.png)
+![Screenshot at 2017-02-24 16-26-57](http://o6uyyks1m.bkt.clouddn.com//django-blog/blog-django-5.png)
 
 
 
