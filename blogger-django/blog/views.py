@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
 from collections import defaultdict
-from .models import Article, Tag
+from .models import Article, Tag, Link
 import markdown2
 
 def index(request):
@@ -15,13 +15,6 @@ class IndexView(ListView):
     template_name = "blog/archives.html"
     context_object_name = "article_list"
     model = Article
-
-    # def get_queryset(self):
-    #     articles = defaultdict(list)
-    #     article_list = Article.objects.all().order_by('pub_date')
-    #     for a in article_list:
-    #         articles[a.pub_date.year].append(a)
-    #     return articles
 
     def get_context_data(self, **kwargs):
         articles = defaultdict(list)
@@ -60,4 +53,18 @@ class TagView(ListView):
         kwargs['this_tag'] = Tag.objects.get(pk=self.kwargs['tag_id'])
         return super(TagView, self).get_context_data(**kwargs)
 
-# Create your views here.
+class LinkView(ListView):
+    template_name = "blog/links.html"
+    context_object_name = "links_list"
+    model = Link
+
+    def get_context_data(self, **kwargs):
+        links = defaultdict(list)
+        link_result = list()
+        link_list = Link.objects.all()
+        for link in link_list:
+            links[link.category].append(link)
+        for link_title, link_urls in links.items():
+            link_result.append((link_title, link_urls))
+        kwargs['links'] = link_result
+        return super(LinkView, self).get_context_data(**kwargs)
